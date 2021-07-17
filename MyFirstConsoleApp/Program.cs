@@ -14,6 +14,12 @@ namespace MyFirstConsoleApp
             Console.WriteLine("please enter your name...");
             name = Console.ReadLine();
 
+            //String interpolation in C#
+            Console.WriteLine($"Hello{name}");
+
+            //string formatting (the number tells the function how many arguments you're passing for display)
+            Console.WriteLine(string.Format("Hello, {0}", name));
+
             //this will not work bc static types. you can change value but not type
             //name = 12;
 
@@ -76,7 +82,39 @@ namespace MyFirstConsoleApp
                 Console.WriteLine(student);
             }
 
+
             //if blocks are identical in JS and C# but there is no triple equality. = for set == for comparison
+
+            //Control Flow
+
+            if (name == "Katy")
+            {
+                Console.WriteLine("Hey it me");
+            }
+            else
+            {
+                Console.WriteLine("not I");
+            }
+
+            // ternaries are not intended for control flow
+
+            var greeting = name == "Katy" ? "It me" : "Not me";
+
+            //Objects in C#
+
+            //anonymous types
+            var katy = new { Name = "Katy", IsTeacher = false };
+
+            //once an object is created it cannot be changed. No reassignment. 
+
+            //objects break the rules sometimes bc of being a reference type
+            object animalType = "Cat";
+            animalType = 37;
+
+            //this is called boxing ^^
+            //every type can be an object (but not every type IS)
+            //boxing moves values to the heap
+
         }
     }
 }
